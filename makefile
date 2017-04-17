@@ -7,13 +7,14 @@ all: first second third
 	@echo "\$$@ = $@"
 	@echo "$$^ = $^"
 	@echo "$$< = $<"
+	@echo "MAKE = $(MAKE)"
 first second third:
 
 $(EXE):$(OBJS)
-	$(CC) -o $(EXE) $(OBJS)
-main.o:
-	$(CC) -o main.o -c main.c
-foo.o:
-	$(CC) -o foo.o -c foo.c
+	$(CC) -o $@ $^
+main.o:main.c
+	$(CC) -o $@ -c $^
+foo.o:foo.c
+	$(CC) -o $@ -c $^
 clean:
 	$(RM) $(EXE) $(OBJS)
