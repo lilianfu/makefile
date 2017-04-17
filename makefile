@@ -1,4 +1,4 @@
 all:
-	echo "hello world"
+	@echo "hello world"
 test:
-	echo "Just for test"
+	@echo "Just for test"
