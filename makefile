@@ -1,4 +1,4 @@
-all: main.o foo.o
+simple: main.o foo.o
 	gcc -o simple main.o foo.o
 main.o:
 	gcc -o main.o -c main.c
